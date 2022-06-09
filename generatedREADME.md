@@ -1,14 +1,14 @@
 
-# NodeJS Readme generator
+# james' app
 
 
 ---
 
 
 ## License
- This project is covered by the The Unlicense License
+ This project is covered by the MIT License License
 
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ---
@@ -16,7 +16,7 @@
 
 ## Description
 
-* CLI app that asks questions using inquirer and processes the data into a professional readme
+* best app ever
 
 
 ---
@@ -25,6 +25,8 @@
 
 * [installation](#installation)
 * [usage](#usage)
+* [contributors](#contributors)
+* [tests](#tests)
 * [questions](#questions)
 
 
@@ -38,14 +40,14 @@
 
 ## Usage
 
-* free to use for everyone
+* free to use
 
 
 ---
 
 ## Contributors
 
-* James Pritchard
+* james
 
 
 ---

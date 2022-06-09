@@ -39,11 +39,14 @@ function renderLicenseSection(data) {
   if(data.license){
     licenseSection = 
 `
-## This project is covered by the ${data.license} License\n
+## License
+ This project is covered by the ${data.license} License\n
 ${licenseBadge}\n
+
+---
 `
   }else{
-    return;
+    licenseSection = ' '
   }
 }
 // [go to heading](#heading)
@@ -60,33 +63,49 @@ function generateMarkdown(data) {
   generateTableOfContents(data)
 return `
 # ${data.title}\n
+
 ---
-${licenseSection}\n 
----
+
+${licenseSection}\n
 ## Description\n
 * ${data.description}\n
+
 ---
+
 ## Table of Contents
 
 * ${tableOfContents.join(`\n* `)}\n
+
 ---
+
 ## Installation\n
-* ${data.installation}
+    ${data.installation}
+
 ---
+
 ## Usage\n
 * ${data.usage}\n
+
 ---
+
 ## Contributors\n
 * ${data.contributing}\n
+
 ---
+
 ## Tests\n
-* ${data.tests}\n
+    ${data.tests}\n
+
 ---
+
 ## Questions\n
 
 [Github Page](https://www.github.com/${data.github})\n
-[Ask any questions by Email](mailto:${data.email})
+
+[Questions or Comments by Email](mailto:${data.email})\n
+
 ---
+
 `;
 }
 
