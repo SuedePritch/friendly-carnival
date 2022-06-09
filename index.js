@@ -1,4 +1,5 @@
 // TODO: Include packages needed for this application
+const generateMarkdown = require('./utils/generateMarkdown')
 const inquirer = require("inquirer");
 const fs = require('fs')
 // TODO: Create an array of questions for user input
@@ -14,64 +15,48 @@ const questions = [
         message: 'What is your Description?',
         name: 'description',
     },
+    // {
+    //     type: 'input',
+    //     message: 'Enter Table of Contents',
+    //     name: 'tableOfContents',
+    // },
+    // {
+    //     type: 'input',
+    //     message: 'Installation Instructions',
+    //     name: 'installation',
+    // },
+    // {
+    //     type: 'input',
+    //     message: 'What is your Usage?',
+    //     name: 'usage',
+    // },
     {
-        type: 'input',
-        message: 'Enter Table of Contents',
-        name: 'tableOfContents',
-    },
-    {
-        type: 'input',
-        message: 'Installation Instructions',
-        name: 'installation',
-    },
-    {
-        type: 'input',
-        message: 'What is your Usage?',
-        name: 'usage',
-    },
-    {
-        type: 'input',
+        type: 'rawlist',
         message: 'What is your License?',
         name: 'license',
+        choices: ['GNU AGPLv3','GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0','MIT License','Boost Software License 1.0','The Unlicense']
     },
-    {
-        type: 'input',
-        message: 'Contributing?',
-        name: 'contributing',
-    },
-    {
-        type: 'input',
-        message: 'How do you run Tests?',
-        name: 'tests',
-    },
-    {
-        type: 'input',
-        message: 'Any Questions?',
-        name: 'questions',
-    },
+    // {
+    //     type: 'input',
+    //     message: 'Contributing?',
+    //     name: 'contributing',
+    // },
+    // {
+    //     type: 'input',
+    //     message: 'How do you run Tests?',
+    //     name: 'tests',
+    // },
+    // {
+    //     type: 'input',
+    //     message: 'Any Questions?',
+    //     name: 'questions',
+    // },
     
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.appendFile(fileName, 
-`# ${data.title}\n
-## Description\n
-${data.description}\n
-## Table of Contents
-${data.tableOfContents}\n
-## Installation Instructions\n
-${data.installation}
-## Usage\n
-${data.usage}\n
-License ${data.license}\n
-## Contributors\n
-${data.contributing}\n
-## Tests\n
-${data.tests}\n
-## Questions\n
-${data.questions}\n
-`, (err) =>
+    fs.appendFile(fileName, data, (err) =>
     err ? console.error(err) : console.log('Commit logged!')
 );
 
@@ -82,8 +67,8 @@ ${data.questions}\n
 function init() {
     inquirer
     .prompt(questions)
-    .then((response) => writeToFile("README.md", response));
-  
+    .then((response) => writeToFile('README.md' ,generateMarkdown(response)));
+
 
 }
 
