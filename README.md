@@ -1,23 +1,27 @@
 
-# aaa
+# james' app
 
 ---
 
-## This project is covered by the MIT License License
+## This project is covered by the The Unlicense License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
 
  
 ---
 ## Description
 
-* sss
+* best app there is
 
 ---
 ## Table of Contents
 
-* [installation](#installation),[usage](#usage),[contributors](#contributors),[tests](#tests),[questions](#questions)
+* [installation](#installation)
+* [usage](#usage)
+* [contributors](#contributors)
+* [tests](#tests)
+* [questions](#questions)
 
 ---
 ## Installation
@@ -36,7 +40,7 @@
 ---
 ## Tests
 
-* npm teset
+* npm test
 
 ---
 ## Questions

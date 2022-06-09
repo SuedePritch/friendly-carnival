@@ -68,7 +68,7 @@ ${licenseSection}\n
 ---
 ## Table of Contents
 
-* ${tableOfContents.join()}\n
+* ${tableOfContents.join(`\n* `)}\n
 ---
 ## Installation\n
 * ${data.installation}
