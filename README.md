@@ -10,6 +10,10 @@
 
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
+---
+
+## Walkthrough
+[Walkthrough video](https://drive.google.com/file/d/1iwfgwDgXn-MGk35uXGvDWU_IRZvuLKp5/view)
 
 ---
 
@@ -67,4 +71,3 @@
 
 
 ---
-[demo](https://drive.google.com/file/d/1DKMMnHIivp3zEw7ggwD4-XfK9BwLIto5/view)
